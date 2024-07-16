@@ -1,0 +1,10 @@
+<div id="outerdiv"class="col-sm-6 mx-auto container my-3 align-item-center"> 
+    <div ><h3>
+        Recent blogs...
+    </h3></div>
+    <div *ngFor="let item of items " class="card mb-3 bg-warning p-3 ">
+        <p class="fw-bold">{{item.title}}</p>
+        <p>{{item.author}}</p>
+        <p>{{item.content | slice:0 :10 }}<span><a [routerLink]="['blogs',item.id]">......more</a></span> </p>
+    </div>
+</div>
